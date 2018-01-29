@@ -13,7 +13,7 @@ class Post extends Component {
       comments: ["My first comments at first", "My second comment at first", "My third comment at first"]
     }
   }
-  handleClick (e) {
+  editBlogPost (e) {
     this.setState({
       body: prompt("update blog post", this.state.body)
     })
@@ -34,7 +34,7 @@ class Post extends Component {
             return <Comment body={comment} />
           })}
         </article>
-        <button onClick={(e) => this.handleClick(e)}>Update Post?</button>
+        <button onClick={(e) => this.editBlogPost(e)}>Update Post?</button>
       </div>
     )
   }
